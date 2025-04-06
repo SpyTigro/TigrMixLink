@@ -1,0 +1,7 @@
+.vs/**/*
+TigrMixLink/.vs/**/*
+TigrMixLink/bin/**/*
+TigrMixLink/obj/**/*
+TigrMixLink.Library/.vs/**/*
+TigrMixLink.Library/bin/**/*
+TigrMixLink.Library/obj/**/*
