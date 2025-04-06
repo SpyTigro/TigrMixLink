@@ -43,7 +43,7 @@
     <Copyright>Copyright © SpyTigro 2025</Copyright>
   </PropertyGroup>
 
-  <Target Name="OverrideBuildRevision" BeforeTargets="GenerateNuspec" AfterTargets="BeforeBuild" >
+  <Target Name="OverrideBuildRevision" BeforeTargets="GenerateNuspec" AfterTargets="BeforeBuild">
     <PropertyGroup>
       <AssemblyVersionBaseTicks>$([MSBuild]::Subtract($([System.DateTime]::UtcNow.Ticks), 630822816000000000))</AssemblyVersionBaseTicks>
       <TicksPerDay>$([System.TimeSpan]::TicksPerDay)</TicksPerDay>
@@ -82,7 +82,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AudioSwitcher.AudioApi.CoreAudio" Version="3.0.3" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="System.IO.Ports" Version="9.0.3" />
   </ItemGroup>
  
 </Project>
