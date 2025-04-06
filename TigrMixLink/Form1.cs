@@ -1,4 +1,5 @@
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -30,6 +31,7 @@ namespace TigrMixLink
         }
 
         #endregion
+        private int numVolumes = 0;
 
         public readonly IConfiguration Configuration;
 
@@ -45,7 +47,26 @@ namespace TigrMixLink
 
         private void OnChange()
         {
-            this.Invoke((MethodInvoker)delegate { this.Text = Configuration.GetSection("Settings:Subkey1:Value1").Get<string>(); });
+            this.Invoke((System.Windows.Forms.MethodInvoker)delegate { this.Text = Configuration.GetSection("Settings:Subkey1:Value1").Get<string>(); });
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addVolumeController();
+        }
+
+        private void addVolumeController()
+        {
+            ComboBox comboBox = new();
+            comboBox.Size = new(100, 20);
+            comboBox.Location = new(40 + numVolumes * 120, 50);
+            numVolumes++;
+            Controls.Add(comboBox);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            addVolumeController();
         }
     }
 }
