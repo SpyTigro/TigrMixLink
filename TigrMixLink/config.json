@@ -1,8 +1,8 @@
 {
-  "comPort": "COM5",
+  "ComPort": "COM5",
   "baudRate": 115200,
   "Devices": [
-    "Steelseries Sonar - Gaming (SteelSeries Sonar Virtual Audio Device)",
+    "SteelSeries Sonar - Gaming (SteelSeries Sonar Virtual Audio Device)",
     "Headphones (SteelSeries Arctis Nova 5X)"
 
   ]

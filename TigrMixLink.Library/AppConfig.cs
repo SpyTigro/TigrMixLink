@@ -7,7 +7,7 @@ namespace TigrMixLink.Library
 {
     public class AppConfig
     {
-        public string comPort { get; set; }
+        public string ComPort { get; set; }
         public int baudRate { get; set; }  
         public List<string> Devices { get; set; } 
     }
